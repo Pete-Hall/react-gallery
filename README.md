@@ -26,5 +26,5 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
   - [x] Create pool.js file
   - [x] insert 6 original images into database
   - [x] Create database.sql file
-  - [ ] Update GET route
+  - [x] Update GET route - had to npm install pg (oofda forgot about this)
   - [ ] Update PUT route
