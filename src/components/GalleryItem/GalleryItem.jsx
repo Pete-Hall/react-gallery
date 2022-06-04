@@ -31,7 +31,7 @@ function GalleryItem(props) {
       }
       <br/>
       <p>Likes: {props.myMoment.likes}</p>
-      <button onClick={handleLikesClick}>Likes</button>
+      <button onClick={handleLikesClick}>Like</button>
     </div>
   );
 }

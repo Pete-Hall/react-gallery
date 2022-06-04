@@ -16,8 +16,8 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
   - [x] display the image
   - [x] swap the image with description on click
   - [x] display number of likes for each moment and include a like button
-  - [ ] on like button click, use axios to make a put call update the like count (this goes in the GalleryItem component?)
-  - [ ] update gallery each time a like button is clicked
+  - [x] on like button click, use axios to make a put call update the like count (this goes in the GalleryItem component)
+  - [x] update gallery each time a like button is clicked
 
 
 

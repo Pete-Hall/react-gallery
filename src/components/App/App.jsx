@@ -10,7 +10,7 @@ function App() {
 
     useEffect(()=>{
       getMoments();
-    }, [moments]); //anytime moments is changed, run getMoments()
+    }, [{moments}]); //anytime moments is changed, run getMoments(). moments with no {} inside the [] also works but maybe this injection seems to be faster?
 
     const getMoments=()=>{
       Axios.get('/gallery').then((response)=>{
