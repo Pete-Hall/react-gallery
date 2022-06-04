@@ -11,9 +11,6 @@ function GalleryList(props) {
 
   return(
     <div>
-      <h2>GalleryList</h2>
-      {/* <p><button onClick={handleHook}>Click</button> Clicks: {hook}</p> */}
-      {/* <p>Props: {JSON.stringify(props)}</p> */}
       <ul>
         {
           props.moments.map(moment => (

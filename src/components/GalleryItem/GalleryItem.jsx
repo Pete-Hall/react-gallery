@@ -1,18 +1,26 @@
 import {useState} from 'react';
+import './GalleryItem.css';
 
 function GalleryItem(props) {
-  // template hook
-  const [hook, setHook] = useState(null);
 
-  const handleHook = () => {
-    setHook(event.target.value);
+  const [show, setShow] = useState(true);
+
+  const handleClick = () => {
+    setShow(!show);
   }
 
   return(
-    <div>
-      <h2>GalleryItem</h2>
-      <p><button onClick={handleHook}>Click</button> Clicks: {hook}</p>
-      <p>Props: {JSON.stringify(props)}</p>
+    <div className='listMoment'>
+      {/* <p>Props: {JSON.stringify(props)}</p> */}
+      {
+        show ?
+        <img onClick={handleClick} src={props.myMoment.path}/>
+        :
+        <p onClick={handleClick}>{props.myMoment.description}</p>
+      }
+      <br/>
+      <p>Likes: {props.myMoment.likes}</p>
+      <button>Likes</button>
     </div>
   );
 }
