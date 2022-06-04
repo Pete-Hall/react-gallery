@@ -10,7 +10,7 @@ function App() {
 
     useEffect(()=>{
       getMoments();
-    }, []);
+    }, [moments]); //anytime moments is changed, run getMoments()
 
     const getMoments=()=>{
       Axios.get('/gallery').then((response)=>{

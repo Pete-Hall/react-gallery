@@ -5,7 +5,7 @@ import Axios from 'axios';
 function GalleryItem(props) {
 
   const [show, setShow] = useState(true);
-  const [likes, setLikes] = useState(0);
+  // const [likes, setLikes] = useState(0);
 
   const handleClick = () => {
     setShow(!show);
@@ -30,7 +30,7 @@ function GalleryItem(props) {
         <p onClick={handleClick}>{props.myMoment.description}</p>
       }
       <br/>
-      <p>Likes: {props.myMoment.likes}, {likes}</p>
+      <p>Likes: {props.myMoment.likes}</p>
       <button onClick={handleLikesClick}>Likes</button>
     </div>
   );
