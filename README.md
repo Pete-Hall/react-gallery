@@ -13,12 +13,12 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] create _taco component for template
 - [x] create GalleryList component and map over the list of gallery data
 - [ ] in GalleryItem...
-  [x] display the image
-  [x] swap the image with description on click
-  [x] display number of likes for each moment and include a like button
-  [ ] on like button click, use axios to make a put call update the like count (this goes in the GalleryItem component?)
-  [ ] update gallery each time a like button is clicked
+  - [x] display the image
+  - [x] swap the image with description on click
+  - [x] display number of likes for each moment and include a like button
+  - [ ] on like button click, use axios to make a put call update the like count (this goes in the GalleryItem component?)
+  - [ ] update gallery each time a like button is clicked
 
 
 
-  [ ] add better css styling to image/description swap (same sizes!) - this is tough since images are being sized responsively. maybe flex boxes. maybe material UI
+- [ ] add better css styling to image/description swap (same sizes!) - this is tough since images are being sized responsively. maybe flex boxes. maybe material UI. could make the p tag have div and make that bigger?
