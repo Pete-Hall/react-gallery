@@ -1,9 +1,12 @@
-import {useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import React from 'react';
 import './App.css';
+import GalleryList from '../GalleryList/GalleryList';
 import Axios from 'axios';
 
 function App() {
+
+    const [moments, setMoments] = useState([]);
 
     useEffect(()=>{
       getMoments();
@@ -11,7 +14,7 @@ function App() {
 
     const getMoments=()=>{
       Axios.get('/gallery').then((response)=>{
-        console.log(response.data);
+        setMoments(response.data);
       }).catch((err)=>{
         console.log(err);
         alert('error getting moments');
@@ -25,6 +28,7 @@ function App() {
         </header>
         <p>Gallery goes here</p>
         {/* <img src="images/goat_small.jpg"/> */}
+        <GalleryList moments = {moments}/>
       </div>
     );
 }
