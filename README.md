@@ -22,6 +22,9 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 ### Stretch
 - [ ] add better css styling to image/description swap (same sizes!) - this is tough since images are being sized responsively. maybe flex boxes. maybe material UI. could make the p tag have div and make that bigger?
 - [ ] Move the data to a database named react_gallery and include database.sql file
-  - [ ] Create database in Postico
-  - [ ] Create pool.js file
-  - [ ] Create database.sql file
+  - [x] Create database in Postico
+  - [x] Create pool.js file
+  - [x] insert 6 original images into database
+  - [x] Create database.sql file
+  - [ ] Update GET route
+  - [ ] Update PUT route
