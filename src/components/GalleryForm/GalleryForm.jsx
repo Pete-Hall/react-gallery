@@ -1,10 +1,10 @@
 import {useState} from 'react';
 import Axios from 'axios';
 
-function GalleryForm() {
+function GalleryForm(props) {
 
-  const [description, setDescription] = useState(null);
-  const [imageURL, setImageURL] = useState(null);
+  const [description, setDescription] = useState('');
+  const [imageURL, setImageURL] = useState('');
 
   const addToGallery = () => {
     console.log('in addToGallery');

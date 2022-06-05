@@ -28,7 +28,7 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         {/* <img src="images/goat_small.jpg"/> */}
-        <GalleryForm/>
+        <GalleryForm moments = {moments}/>
         <GalleryList moments = {moments}/>
       </div>
     );
