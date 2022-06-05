@@ -8,8 +8,8 @@ CREATE TABLE gallery (
 
 -- CRUD tests
 INSERT INTO gallery (path, description) VALUES ('images/tillie.JPG', 'Photo of our 2nd family dog who I grew up with, Tillie.');
-SELECT * FROM gallery;
-
+SELECT * FROM gallery ORDER BY id ASC;
+UPDATE gallery SET likes=likes+1 WHERE id=1;
 
 
 -- Add original 6 images
