@@ -13,7 +13,7 @@ function GalleryItem(props) {
 
   const handleLikesClick = () => {
     Axios.put(`/gallery/like/${props.myMoment.id}`).then((response)=>{
-      console.log(response)
+      console.log(response);
     }).catch((err)=>{
       console.log(err);
       alert('error updaing likes');

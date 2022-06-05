@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const gallery = require('./routes/gallery.router.js');
+// const gallery = require('./routes/gallery.router.js');
+const gallery = require('./routes/gallery.router');
 const PORT = process.env.PORT || 5001;
 
 /** ---------- MIDDLEWARE ---------- **/
