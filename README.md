@@ -37,3 +37,8 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
   /// BONUS
   - [ ] clear inputs
   - [ ] make input field bigger
+- [ ] Add the ability to delete a gallery item
+  - [ ] add delete button to Gallery Item
+  - [ ] add click handler to delete button with Axios route
+  - [ ] test SQL delete query in Postico and add to database.sql
+  - [ ] add delete route
