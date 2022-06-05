@@ -1,3 +1,4 @@
+const { query } = require('express');
 const express = require('express');
 const router = express.Router();
 // const galleryItems = require('../modules/gallery.data');
@@ -41,5 +42,18 @@ router.get('/', (req, res) => {
         res.sendStatus(500);
     })
 }); // END GET Route
+
+// POST Route STRETCH
+router.post('/', (req, res)=>{
+    console.log(req.body);
+    let queryString = `INSERT INTO gallery (path, description) VALUES ($1, $2);`;
+    let values = [req.body.path, req.body.description];
+    pool.query(queryString, values).then((results)=>{
+        res.sendStatus(201);
+    }).catch((err)=>{
+        console.log(err);
+        res.sendStatus(500);
+    })
+}) // END POST Route
 
 module.exports = router;

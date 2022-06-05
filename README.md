@@ -29,8 +29,10 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
   - [x] Update GET route - had to npm install pg (oofda forgot about this)
   - [x] Update PUT route
 - [ ] Add the ability to POST a new gallery item (start from client to db)
-  - [ ] create new component with front end inputs/button. Add component to App.jsx. 
-  - [ ] collect input info into an object and set up hook/click handler for add button
-  - [ ] set up axios PUT call in component
-  - [ ] set up PUT route
-  - [ ] test and add SQL queries
+  - [x] create new component with front end inputs/button. Add component to App.jsx. 
+  - [x] collect input info into an object and set up hook/click handler for add button
+  - [x] set up axios PUT call in component
+  - [x] set up PUT route
+  - [x] test and add SQL queries
+  - [ ] clear inputs
+  - [ ] make input field bigger? 
