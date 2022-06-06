@@ -5,10 +5,19 @@ import Axios from 'axios';
 function GalleryItem(props) {
 
   const [show, setShow] = useState(true);
-  // const [likes, setLikes] = useState(0);
 
   const handleClick = () => {
     setShow(!show);
+  }
+
+  const deleteMoment = () => {
+    console.log('in deleteMoment:', props.myMoment.id);
+    Axios.delete(`/gallery/delete/${props.myMoment.id}`).then((response)=>{
+      console.log(response);
+    }).catch((err)=>{
+      console.log(err);
+      alert('error deleting moment');
+    })
   }
 
   const handleLikesClick = () => {
@@ -32,6 +41,9 @@ function GalleryItem(props) {
       <br/>
       <p>Likes: {props.myMoment.likes}</p>
       <button onClick={handleLikesClick}>Like</button>
+      <br/>
+      <br/>
+      <button onClick={deleteMoment}>Delete</button>
     </div>
   );
 }

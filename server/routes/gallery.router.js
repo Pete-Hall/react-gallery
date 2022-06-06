@@ -56,4 +56,17 @@ router.post('/', (req, res)=>{
     })
 }) // END POST Route
 
+// DELETE Route STRETCH
+router.delete('/delete/:id', (req, res) =>{
+    console.log(req.params);
+    let queryString = `DELETE FROM gallery WHERE id=$1;`;
+    let values = [req.params.id];
+    pool.query(queryString, values).then((results)=>{
+        res.sendStatus(200);
+    }).catch((err)=>{
+        console.log(err);
+        res.sendStatus(500);
+    })
+})
+
 module.exports = router;
