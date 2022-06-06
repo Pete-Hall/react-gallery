@@ -30,7 +30,6 @@ function GalleryForm(props) {
 
   return(
     <div>
-      <h2>GalleryForm</h2>
       <input onChange={changeDescription} type="text" placeholder="Description"></input>
       <input onChange={changeImageURL} type="text" placeholder="Image URL"></input>
       <button onClick={addToGallery}>Add to Gallery</button>

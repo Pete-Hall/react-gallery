@@ -1,8 +1,9 @@
 .listMoment {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .listMoment img {
   width: 20vw;
+  margin-top: 10px;
 }
 
