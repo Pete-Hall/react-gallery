@@ -5,6 +5,7 @@ import GalleryList from '../GalleryList/GalleryList';
 import GalleryForm from '../GalleryForm/GalleryForm';
 import Axios from 'axios';
 import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 
 function App() {
 
@@ -28,10 +29,12 @@ function App() {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <Container>
+        <div className='form'>
           <GalleryForm moments = {moments}/>
+        </div>
+        <Box>
           <GalleryList moments = {moments}/>
-        </Container>
+        </Box>
       </div>
     );
 }
