@@ -42,4 +42,4 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
   - [x] add click handler to delete button with Axios route
   - [x] test SQL delete query in Postico and add to database.sql
   - [x] add delete route
-- [ ] Add styling with Material-UI
+- [x] Add styling with Material-UI

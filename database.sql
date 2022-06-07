@@ -7,10 +7,10 @@ CREATE TABLE gallery (
 --ALTER TABLE gallery ALTER likes SET DEFAULT 0;
 
 -- CRUD tests
-INSERT INTO gallery (path, description) VALUES ('images/tillie.JPG', 'Photo of our 2nd family dog who I grew up with, Tillie.');
+INSERT INTO gallery (path, description) VALUES ('$1, $2');
 SELECT * FROM gallery ORDER BY id ASC;
-UPDATE gallery SET likes=likes+1 WHERE id=1;
-DELETE FROM gallery WHERE id=8;
+UPDATE gallery SET likes=likes+1 WHERE id=$1;
+DELETE FROM gallery WHERE id=$1;
 
 -- Add original 6 images
 INSERT INTO gallery (path, description) VALUES ('images/tillie.JPG', 'Photo of our 2nd family dog who I grew up with, Tillie.');
