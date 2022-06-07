@@ -32,9 +32,9 @@ function App() {
         <div className='form'>
           <GalleryForm moments = {moments}/>
         </div>
-        <Box>
+        <Container>
           <GalleryList moments = {moments}/>
-        </Box>
+        </Container>
       </div>
     );
 }

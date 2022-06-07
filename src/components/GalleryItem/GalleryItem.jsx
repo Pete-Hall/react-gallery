@@ -41,7 +41,7 @@ function GalleryItem(props) {
     <div className='listMoment'>
       <Grid item>
         <Card variant='outlined'>
-          <CardContent sx={{ justifyContent: 'center' }}>
+          <CardContent sx={{ justifyContent: 'center', maxWidth: '15vw' }}>
             {
               show ?
               <img onClick={handleClick} src={props.myMoment.path}/>

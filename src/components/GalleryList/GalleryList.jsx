@@ -7,7 +7,9 @@ function GalleryList(props) {
   return(
     <div>
     
-        <Grid container sx={{justifyContent:'center'}}>
+        <Grid container sx={{
+          alignContent:'flex-start',
+          }}>
         {
           props.moments.map(moment => (
             <GalleryItem myMoment = {moment} />
