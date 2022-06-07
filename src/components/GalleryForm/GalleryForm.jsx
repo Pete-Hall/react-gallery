@@ -1,5 +1,7 @@
 import {useState} from 'react';
 import Axios from 'axios';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 function GalleryForm(props) {
 
@@ -30,9 +32,9 @@ function GalleryForm(props) {
 
   return(
     <div>
-      <input onChange={changeDescription} type="text" placeholder="Description"></input>
-      <input onChange={changeImageURL} type="text" placeholder="Image URL"></input>
-      <button onClick={addToGallery}>Add to Gallery</button>
+      <TextField onChange={changeDescription} type="text" label="Description" variant='standard' multiline/>
+      <TextField onChange={changeImageURL} type="text" label="Image URL" variant='standard' multiline/>
+      <Button onClick={addToGallery} variant='contained' size='large'>Add to Gallery</Button>
     </div>
   );
 }

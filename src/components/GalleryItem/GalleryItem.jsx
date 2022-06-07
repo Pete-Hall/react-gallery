@@ -1,6 +1,8 @@
 import {useState} from 'react';
 import './GalleryItem.css';
 import Axios from 'axios';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
 
 function GalleryItem(props) {
 
@@ -40,10 +42,10 @@ function GalleryItem(props) {
       }
       <br/>
       <p>Likes: {props.myMoment.likes}</p>
-      <button onClick={handleLikesClick}>Like</button>
-      <br/>
-      <br/>
-      <button onClick={deleteMoment}>Delete</button>
+      <ButtonGroup variant='contained'>
+        <Button onClick={handleLikesClick} color='success'>Like</Button>
+        <Button onClick={deleteMoment} color="secondary">Delete</Button>
+      </ButtonGroup>
     </div>
   );
 }
