@@ -1,6 +1,12 @@
 import {useState} from 'react';
 import './GalleryItem.css';
 import Axios from 'axios';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Divider from '@mui/material/Divider';
 
 function GalleryItem(props) {
 
@@ -31,19 +37,24 @@ function GalleryItem(props) {
 
   return(
     <div className='listMoment'>
-      {/* <p>Props: {JSON.stringify(props)}</p> */}
-      {
-        show ?
-        <img onClick={handleClick} src={props.myMoment.path}/>
-        :
-        <p onClick={handleClick}>{props.myMoment.description}</p>
-      }
-      <br/>
-      <p>Likes: {props.myMoment.likes}</p>
-      <button onClick={handleLikesClick}>Like</button>
-      <br/>
-      <br/>
-      <button onClick={deleteMoment}>Delete</button>
+      <Card variant='outlined' sx={{maxWidth: 350}} >
+        <CardContent sx={{ justifyContent: 'center' }}>
+          {
+            show ?
+            <img onClick={handleClick} src={props.myMoment.path}/>
+            :
+            <p onClick={handleClick} className='imageDescription'>{props.myMoment.description}</p>
+          }
+        </CardContent>
+        <Divider variant='middle'/>
+        <p>Likes: {props.myMoment.likes}</p>
+        <CardActions sx={{ justifyContent: 'center' }}>
+          <ButtonGroup variant='contained'>
+            <Button onClick={handleLikesClick} color='success'>Like</Button>
+            <Button onClick={deleteMoment} color="secondary">Delete</Button>
+          </ButtonGroup>
+        </CardActions>
+      </Card>
     </div>
   );
 }
