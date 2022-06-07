@@ -3,6 +3,9 @@ import './GalleryItem.css';
 import Axios from 'axios';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
 
 function GalleryItem(props) {
 
@@ -33,19 +36,23 @@ function GalleryItem(props) {
 
   return(
     <div className='listMoment'>
-      {/* <p>Props: {JSON.stringify(props)}</p> */}
-      {
-        show ?
-        <img onClick={handleClick} src={props.myMoment.path}/>
-        :
-        <p onClick={handleClick}>{props.myMoment.description}</p>
-      }
-      <br/>
-      <p>Likes: {props.myMoment.likes}</p>
-      <ButtonGroup variant='contained'>
-        <Button onClick={handleLikesClick} color='success'>Like</Button>
-        <Button onClick={deleteMoment} color="secondary">Delete</Button>
-      </ButtonGroup>
+      <Card variant='outlined' sx={{maxWidth: 350}}>
+        <CardContent>
+          {
+            show ?
+            <img onClick={handleClick} src={props.myMoment.path}/>
+            :
+            <p onClick={handleClick}>{props.myMoment.description}</p>
+          }
+        </CardContent>
+        <p>Likes: {props.myMoment.likes}</p>
+        <CardActions>
+          <ButtonGroup variant='contained'>
+            <Button onClick={handleLikesClick} color='success'>Like</Button>
+            <Button onClick={deleteMoment} color="secondary">Delete</Button>
+          </ButtonGroup>
+        </CardActions>
+      </Card>
     </div>
   );
 }
