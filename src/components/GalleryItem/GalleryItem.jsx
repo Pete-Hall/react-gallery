@@ -7,6 +7,8 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
+import Grid from '@mui/material/Grid';
+
 
 function GalleryItem(props) {
 
@@ -37,24 +39,26 @@ function GalleryItem(props) {
 
   return(
     <div className='listMoment'>
-      <Card variant='outlined' sx={{maxWidth: 350}} >
-        <CardContent sx={{ justifyContent: 'center' }}>
-          {
-            show ?
-            <img onClick={handleClick} src={props.myMoment.path}/>
-            :
-            <p onClick={handleClick} className='imageDescription'>{props.myMoment.description}</p>
-          }
-        </CardContent>
-        <Divider variant='middle'/>
-        <p>Likes: {props.myMoment.likes}</p>
-        <CardActions sx={{ justifyContent: 'center' }}>
-          <ButtonGroup variant='contained'>
-            <Button onClick={handleLikesClick} color='success'>Like</Button>
-            <Button onClick={deleteMoment} color="secondary">Delete</Button>
-          </ButtonGroup>
-        </CardActions>
-      </Card>
+      <Grid item>
+        <Card variant='outlined'>
+          <CardContent sx={{ justifyContent: 'center', maxWidth: '15vw' }}>
+            {
+              show ?
+              <img onClick={handleClick} src={props.myMoment.path}/>
+              :
+              <p onClick={handleClick} className='imageDescription'>{props.myMoment.description}</p>
+            }
+          </CardContent>
+          <Divider variant='middle'/>
+          <p>Likes: {props.myMoment.likes}</p>
+          <CardActions sx={{ justifyContent: 'center' }}>
+            <ButtonGroup variant='contained'>
+              <Button onClick={handleLikesClick} color='success'>Like</Button>
+              <Button onClick={deleteMoment} color="secondary">Delete</Button>
+            </ButtonGroup>
+          </CardActions>
+        </Card>
+      </Grid>
     </div>
   );
 }
