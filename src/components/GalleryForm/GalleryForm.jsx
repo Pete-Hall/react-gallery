@@ -15,7 +15,7 @@ function GalleryForm(props) {
       description: description
     };
     Axios.post('/gallery', newItem).then((response)=>{
-      console.log(response);
+      console.log(response); // should do response.data
       alert('added moment to gallery');
     }).catch((err)=>{
       console.log(err);

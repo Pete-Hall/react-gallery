@@ -12,7 +12,7 @@ function App() {
 
     useEffect(()=>{
       getMoments();
-    }, [{moments}]); //anytime moments is changed, run getMoments(). moments with no {} inside the [] also works but maybe this injection seems to be faster?
+    }, [{moments}]); //anytime moments is changed, run getMoments(). moments with no {} inside the [] also works but maybe this injection seems to be faster? (From Dev, moments is set above as an empty array...so I'm guessing when that array changes, it fires.)
 
     const getMoments=()=>{
       Axios.get('/gallery').then((response)=>{
@@ -23,6 +23,7 @@ function App() {
       })
     }
 
+    //// I realized after the fact in class that I should have created a Body componenet, called in the App.jsx file, and put the GET, useEffect, and GalleryForm/GalleryList components in that Body file.
     return (
       <div className="App">
         <header className="App-header">
