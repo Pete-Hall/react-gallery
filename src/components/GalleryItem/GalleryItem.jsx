@@ -8,11 +8,19 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
+import {useDispatch, useSelector} from 'react-redux';
 
 
 function GalleryItem(props) {
 
   const [show, setShow] = useState(true);
+  const totalClicksReducer = useSelector(store => store.totalClicksReducer);
+  const dispatch = useDispatch();
+
+  // const updateReducerClicks = () =>{
+  //   console.log('in updateReducerClicks:', props.myMoment.likes);
+  //   dispatch({type: 'ADD_CLICK', payload: props.myMoment.likes});
+  // }
 
   const handleClick = () => {
     setShow(!show);
@@ -29,6 +37,7 @@ function GalleryItem(props) {
   }
 
   const handleLikesClick = () => {
+    dispatch({type: 'ADD_CLICK', payload: props.myMoment.likes+1});
     Axios.put(`/gallery/like/${props.myMoment.id}`).then((response)=>{
       console.log(response);
     }).catch((err)=>{

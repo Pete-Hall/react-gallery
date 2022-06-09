@@ -5,10 +5,12 @@ import GalleryList from '../GalleryList/GalleryList';
 import GalleryForm from '../GalleryForm/GalleryForm';
 import Axios from 'axios';
 import Container from '@mui/material/Container';
+import {useSelector} from 'react-redux';
 
 function App() {
 
     const [moments, setMoments] = useState([]);
+    const totalClicksReducer = useSelector(store => store.testReducer);
 
     useEffect(()=>{
       getMoments();
@@ -28,6 +30,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
+          <h2>Total Likes: {totalClicksReducer}</h2>
         </header>
         <div className='form'>
           <GalleryForm moments = {moments}/>
