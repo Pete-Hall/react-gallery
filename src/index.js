@@ -7,9 +7,8 @@ import {Provider} from 'react-redux';
 
 const totalClicksReducer = (state=0, action) => {
   console.log('in totalClicksReducer:', action);
-  
   if(action.type === 'ADD_CLICK') {
-    state = action.payload;
+    state ++;
   }
   return state;
 }
