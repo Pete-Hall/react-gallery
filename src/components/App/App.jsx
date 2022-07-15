@@ -30,7 +30,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
-          <h2>Total Click on Likes: {totalClicksReducer}</h2>
+          {/* <h2>Total Click on Likes: {totalClicksReducer}</h2> */}
         </header>
         <div className='form'>
           <GalleryForm moments = {moments}/>

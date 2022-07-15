@@ -1,45 +1,37 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# React Gallery
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+_Duration 1 Weekend Sprint_
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+This Full Stack application uses React to display memories from my life. Users can add another memory, like a memory, and delete a memory (full CRUD).
 
-### Required
-- [x] Use axios to retrieve (GET) data from to /gallery and store it in App.jsx.
-- [x] create _taco component for template
-- [x] create GalleryList component and map over the list of gallery data
-- [ ] in GalleryItem...
-  - [x] display the image
-  - [x] swap the image with description on click
-  - [x] display number of likes for each moment and include a like button
-  - [x] on like button click, use axios to make a put call update the like count (this goes in the GalleryItem component)
-  - [x] update gallery each time a like button is clicked
+## Interface
 
-### Stretch
-- [ ] add better css styling to image/description swap (same sizes!) - this is tough since images are being sized responsively. maybe flex boxes. maybe material UI. could make the p tag have div and make that bigger?
-- [x] Move the data to a database named react_gallery and include database.sql file
-  - [x] Create database in Postico
-  - [x] Create pool.js file
-  - [x] insert 6 original images into database
-  - [x] Create database.sql file
-  - [x] Update GET route - had to npm install pg (oofda forgot about this)
-  - [x] Update PUT route
-- [x] Add the ability to POST a new gallery item (start from client to db)
-  - [x] create new component with front end inputs/button. Add component to App.jsx. 
-  - [x] collect input info into an object and set up hook/click handler for add button
-  - [x] set up axios PUT call in component
-  - [x] set up PUT route
-  - [x] test and add SQL queries
-  /// BONUS
-  - [ ] clear inputs
-  - [ ] make input field bigger
-- [x] Add the ability to delete a gallery item
-  - [x] add delete button to Gallery Item
-  - [x] add click handler to delete button with Axios route
-  - [x] test SQL delete query in Postico and add to database.sql
-  - [x] add delete route
-- [x] Add styling with Material-UI
+![wireframes](wireframes/gallery.png)
+
+## Installation
+
+([Node.js](https://nodejs.org/en/) is used in this project)
+
+To locally run the project...
+
+1. Create a database named `react_gallery`,
+2. The queries in the `database.sql` file are set up to create all the necessary tables and populate those tables with some sample feedack. The project is built on [Postgres](https://www.postgresql.org/download/), so you will need to make sure to have that installed. Using Postico is recommended to run those queries as that was used to create the queries 
+3. Open up your code editor of choice and run `npm install` in your terminal to install the necessary dependencies
+4. Run `npm run server` in your terminal to start up the server
+5. Run `npm run client` in your terminal to start up the client in your browser
+6. The `npm run client` command will open up a new browser tab for you! (if not there will be a localhost link in your terminal you can use)
+
+## Built with...
+
+- React
+- Express
+- Node.js
+- PostgreSQL
+- Material-UI
+
+## Acknowledgement
+
+Thanks to [Prime Digital Academy](www.primeacademy.io)!
+
